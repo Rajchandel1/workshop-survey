@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build & Launch Your First Product</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media (max-width:648px) {
+            .form-input {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Section 1: Intro -->
+    <div id="section-1" class="section active">
+        <h1 class="intro-title">Hey <span class="text-green">KSIAN</span>, There's something<br><span class="text-green">exciting</span> for you.</h1>
+        <div class="btn-wrap"><button id="btn-excite" class="btn btn-primary">Excite Me!</button></div>
+    </div>
+
+    <!-- Section 2: Chat Animation -->
+    <div id="section-2" class="section">
+        <div class="chat-container">
+            <div class="chat-bubble left">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.KwjNPZZMDz9QutKPsd0K0QHaGL?pid=Api&P=0&h=180" alt="">
+                <div class="text">
+                    <p class="chat-name text-blue-light">Mark Zuckerberg</p>
+                    <p>Hey buddy. You know, I built Facebook in college.</p>
+                </div>
+            </div>
+            <div class="chat-bubble left">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.KwjNPZZMDz9QutKPsd0K0QHaGL?pid=Api&P=0&h=180" alt="">
+                <p>You can build something amazing like that too, And Finally Add Founder And CEO in your Bio!</p>
+            </div>
+            <div class="chat-bubble right">
+                <p>Founder & CEO in my bio... I want that!</p>
+            </div>
+            <div class="chat-bubble left">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.KwjNPZZMDz9QutKPsd0K0QHaGL?pid=Api&P=0&h=180" alt="">
+                <p>Want to know how?</p>
+            </div>
+            <div id="chat-button-container" class="chat-button-container">
+                <button id="btn-know-how" class="btn btn-primary">Tell Me How</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Event Reveal -->
+    <div id="section-3" class="section">
+        <img class="sec3-img" src="https://cdn3d.iconscout.com/3d/premium/thumb/mobile-development-11652981-9531439.png" alt="pc and mobile">
+        <h1 id="event-title" class="event-title"><span class="text-green">Build</span> & Launch</h1>
+        <p id="event-subtitle" class="event-subtitle">Your First Product.</p>
+        <button id="btn-details" class="btn btn-primary">This is what I need!</button>
+    </div>
+
+    <!-- Section 4: Seminar Details -->
+    <div id="section-4" class="section">
+        <div class="seminar-container">
+            <h2 class="seminar-title">What you will <span class="text-green">Learn:</span></h2>
+            <div class="seminar-grid">
+                <div class="detail-card">
+                    <h3 class="detail-title text-blue-light">Idea to MVP</h3>
+                    <p class="text-gray">Transform your brilliant idea into a Minimum Viable Product from scratch.</p>
+                </div>
+                <div class="detail-card">
+                    <h3 class="detail-title text-blue-light">Tech Stack</h3>
+                    <p class="text-gray">Master the modern technologies needed to build and scale your application.</p>
+                </div>
+                <div class="detail-card">
+                    <h3 class="detail-title text-blue-light">Launch Strategy</h3>
+                    <p class="text-gray">Learn how to market your product and successfully launch it to the world.</p>
+                </div>
+            </div>
+            <button id="btn-one-more-thing" class="btn btn-primary seminar-button">One more exciting thing?</button>
+        </div>
+    </div>
+
+    <!-- Section 5: Certificate -->
+    <div id="section-5" class="section">
+        <img class="sec3-img" src="https://cdn3d.iconscout.com/3d/premium/thumb/certificate-10804283-8678929.png" alt="">
+        <h2 class="certificate-title">You'll get a <span class="text-green">Certificate!</span></h2>
+        <p class="text-gray certificate-text">A verified certificate of completion to boost your profile.</p>
+        <h3 class="certificate-question">So, are you coming?</h3>
+        <button id="btn-yes-coming" class="btn btn-primary">Yes, I'm Coming!</button>
+    </div>
+
+    <!-- Section 6: Registration Form -->
+    <div id="section-6" class="section">
+        <div class="form-container">
+            <h2 class="form-title text-red animate-pulse">LIMITED SEATS AVAILABLE!</h2>
+            <p class="text-gray form-text">Register ASAP! You might miss the chance to build the next Facebook.</p>
+            <form id="registration-form" class="form" onsubmit="return false;">
+                <input type="text" placeholder="Full Name" class="form-input" required>
+                <input type="email" placeholder="Email Address" class="form-input" required>
+                <input type="tel" placeholder="Phone Number" class="form-input" required>
+                <div class="form-grid">
+                    <input type="text" placeholder="Year (e.g., FE, SE)" class="form-input" required>
+                    <input type="text" placeholder="Division" class="form-input" required>
+                </div>
+                <button type="button" id="btn-done-coming" class="btn btn-primary form-button">Done! I'm coming!</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Section 7: Confirmation & Game -->
+    <div id="section-7" class="section">
+        <h2 class="confirmation-title">Great <span class="text-green">Decision</span>, My Friend!</h2>
+        <p class="text-gray confirmation-text">Meet You in <span class="text-green">Workshop!</span></p>
+        <p class="text-gray confirmation-note">Keep Your Laptop for Hands-On Experience</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
