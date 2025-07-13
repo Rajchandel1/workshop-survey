@@ -117,14 +117,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const form = document.getElementById('registration-form');
     const formData = {
-      name: form.querySelector('input[placeholder="Full Name"]').value,
-      email: form.querySelector('input[placeholder="Email Address"]').value,
-      phone: form.querySelector('input[placeholder="Phone Number"]').value,
-      year: form.querySelector('input[placeholder="Year (e.g., FE, SE)"]').value,
-      division: form.querySelector('input[placeholder="Division"]').value
+       Name: form.querySelector('input[placeholder="Full Name"]').value,
+  Email: form.querySelector('input[placeholder="Email Address"]').value,
+  Phone: form.querySelector('input[placeholder="Phone Number"]').value,
+  Year: form.querySelector('input[placeholder="Year (e.g., FE, SE)"]').value,
+  Division: form.querySelector('input[placeholder="Division"]').value
+
     };
 
-    if (!formData.name || !formData.email || !formData.phone || !formData.year || !formData.division) {
+    if (!formData.Name || !formData.Email || !formData.Phone || !formData.Year || !formData.Division) {
       alert('Please fill in all fields!');      return;
     }
 
@@ -138,10 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Background submission to Google Apps Script
     setTimeout(async () => {
       try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbzX3Gyuy8eQibDKwxMHl5ArGEuSp8f679fJCIXWu4R_pT-nEQCuXESblwXgIOa5hB5pKA/exec', {
+        const response = await fetch('https://sheetdb.io/api/v1/t0rk7z0wb48ou', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData)
+          body: JSON.stringify({ data: formData })
         });
 
         if (response.ok) {
