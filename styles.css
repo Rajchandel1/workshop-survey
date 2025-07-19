@@ -6,7 +6,7 @@
 
 html {
     max-width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 html::-webkit-scrollbar {
@@ -110,6 +110,11 @@ h1 {
 .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 30px -10px #029f06;
+}
+
+.text-gray {
+    text-align: start;
+    line-height: 1.1;
 }
 .chat-container {
     width: 100%;
