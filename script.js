@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Background submission to Google Apps Script
     setTimeout(async () => {
       try {
-        const response = await fetch('https://sheetdb.io/api/v1/t0rk7z0wb48ou', {
+        const response = await fetch('https://sheetdb.io/api/v1/x5h0i1wdc96zr', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ data: formData })
